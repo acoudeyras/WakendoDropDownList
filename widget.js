@@ -43,9 +43,6 @@ WAF.define('WakendoDropDownList', ['waf-core/widget', 'wakendoCore', 'kendoHelpe
         		}
         	});
         	
-			//dataTextField: "childName",
-    	//	dataValueField: "childId",
-        	
         	self.kendoWidget = $el.data("kendoDropDownList");
         },
 
@@ -55,6 +52,14 @@ WAF.define('WakendoDropDownList', ['waf-core/widget', 'wakendoCore', 'kendoHelpe
 
         disable: function() {
         	this.kendoWidget.enable(false);
+        },
+        
+        open: function() {
+        	this.kendoWidget.open();
+        },
+
+        close: function() {
+        	this.kendoWidget.close();
         }
         
     });
